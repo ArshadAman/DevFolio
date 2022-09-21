@@ -1,0 +1,11 @@
+Sort Developer by tags
+Sort Developer by most likes
+Sort Developer by most Project
+
+User will able to edit or delete his project directly from project section if that project belong to him.
+
+User will add the tags instead of pre defined tags..
+
+Add Edit comment feature.
+
+Date the message read

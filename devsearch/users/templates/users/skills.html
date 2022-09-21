@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <a class="backButton" href="{% url 'account' %}"><i class="im im-angle-left"></i></a>
+            <br>
+            {% if todo == 'add' %}
+            <h1>Add Skill</h1>
+                <form class="form" action="{% url 'add-skill' %}" method='post'>
+                    {% csrf_token %}
+                    {% for f in form %}
+                    <div class="form__field">
+                        <label for="formInput#text">{{f.label}}: </label>
+                        {{f}}
+                    </div>
+                    {% endfor %}
+                    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+                </form>
+            {% endif %}
+
+            {% if todo == 'edit' %}
+            <h1>Edit Skill</h1>
+                <form class="form" action="" method='post'>
+                    {% csrf_token %}
+                    {% for f in form %}
+                    <div class="form__field">
+                        <label for="formInput#text">{{f.label}}: </label>
+                        {{f}}
+                    </div>
+                    {% endfor %}
+                    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,5 @@
+Python based web framework
+Server side framework
+Desgined to get you started fast
+Betteries included
+MVT Design Pattern

@@ -1,0 +1,27 @@
+{% extends 'main.html' %} {% block content %}
+<main class="formPage my-xl">
+  <div class="content-box">
+    <div class="formWrapper">
+      <br />
+
+      <form action="" method="post" class="form">
+        {% csrf_token %}
+        <div class="form__field">
+          <h4>Are you sure you want to delete: {{object}}?</h4>
+        </div>
+        <a href="{{request.GET.next}}"><input
+          class="btn btn--lg my-md"
+          type="submit"
+          value="Go Back"
+        /></a>
+        <input
+          class="btn btn--lg my-md"
+          type="submit"
+          value="Confirm"
+          style="background-color: red; color:white"
+        />
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock content %}
